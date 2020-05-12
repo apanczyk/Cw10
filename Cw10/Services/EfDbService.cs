@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
- using Cw10.Models;
+  using Cw10.DTOs;
+  using Cw10.DTOs;
+  using Cw10.Models;
 
  namespace Cw10.Services
 {
@@ -38,6 +40,65 @@ using System.Threading.Tasks;
             
             db.SaveChanges();
             return student;
+        }
+
+        public EnrollmentResponse EnrollStudent(EnrollStudentRequest request)
+        {
+            var db = new s18706Context();
+            
+            using(var dbTran = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    var idStudies = db.Studies.SingleOrDefault(x=>x.Name==request.Studies);
+                    if (idStudies == null)
+                        throw new Exception();
+                    
+                    if (db.Enrollment.Where(x => x.Semester == 1)
+                        .SingleOrDefault(x => x.IdStudy == idStudies.IdStudy) == null)
+                    {
+                        db.Enrollment.Add(new Enrollment
+                        {
+                            IdEnrollment = db.Enrollment.Max(x=>x.IdEnrollment)+1,
+                            Semester = 1,
+                            IdStudy = idStudies.IdStudy,
+                            StartDate = DateTime.Now
+                        });
+                    }
+
+                    db.Student.Add(new Student
+                    {
+                        IndexNumber = request.IndexNumber,
+                        FirstName = request.FirstName,
+                        LastName = request.LastName,
+                        BirthDate = request.Birthdate,
+                        IdEnrollment = db.Enrollment.Where(x=>x.Semester==1)
+                            .Where(x=>x.IdStudy==idStudies.IdStudy)
+                            .Select(x=>x.IdEnrollment).First()
+                    });
+
+                    db.SaveChanges();
+                    dbTran.Commit();
+                    return db.Enrollment.Where(x => x.Semester == 1)
+                        .Where(x => x.IdStudy == idStudies.IdStudy).Select(x=> new EnrollmentResponse
+                        {
+                            IdEnrollment = x.IdEnrollment,
+                            IdStudy = x.IdStudy,
+                            Semester = x.Semester,
+                            StartDate = x.StartDate
+                        }).First();
+                }
+                catch (Exception)
+                {
+                    dbTran.Rollback();
+                    return null;
+                }
+            }
+        }
+
+        public void PromoteStudents(PromoteStudentRequest request)
+        {
+            throw new NotImplementedException();
         }
     }
 }

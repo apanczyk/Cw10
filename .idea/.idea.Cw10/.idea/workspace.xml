@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="381a5dd9-263b-44f8-ac99-9da16a4480b4" name="Default Changelist" comment="init">
+    <list default="true" id="381a5dd9-263b-44f8-ac99-9da16a4480b4" name="Default Changelist" comment="10.2">
+      <change afterPath="$PROJECT_DIR$/Cw10/Controllers/EnrollmentsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cw10/DTOs/EnrollStudentRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cw10/DTOs/EnrollmentResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cw10/DTOs/PromoteStudentRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cw10/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cw10/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cw10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cw10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cw10/Controllers/StudentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cw10/Controllers/StudentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cw10/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Cw10/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cw10/Services/EfDbService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cw10/Services/EfDbService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cw10/Services/IEfDbService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cw10/Services/IEfDbService.cs" afterDir="false" />
     </list>
@@ -18,14 +21,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Cw10/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Cw10/Models/Student.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cw10/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cw10/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Kolo/KolokwiumS18706/KolokwiumS18706/Controllers/MedicamentsController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Cw10/Models/Enrollment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cw10/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Cw10/Services/EfDbService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/Controllers/EnrollmentsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cw10/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/DTOs/EnrollStudentRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/DTOs/PromoteStudentRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/DTOs/EnrollmentResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/Models/Student.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/Models/Enrollment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cw10/Services/EfDbService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cw10/Services/IEfDbService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cw10/Controllers/StudentsController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -34,8 +41,12 @@
       <list>
         <option value="$PROJECT_DIR$/Cw10/Startup.cs" />
         <option value="$PROJECT_DIR$/Cw10/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/Cw10/Services/IEfDbService.cs" />
         <option value="$PROJECT_DIR$/Cw10/Controllers/StudentsController.cs" />
+        <option value="$PROJECT_DIR$/Cw10/DTOs/EnrollmentResponse.cs" />
+        <option value="$PROJECT_DIR$/Cw10/DTOs/EnrollStudentRequest.cs" />
+        <option value="$PROJECT_DIR$/Cw10/DTOs/PromoteStudentRequest.cs" />
+        <option value="$PROJECT_DIR$/Cw10/Services/IEfDbService.cs" />
+        <option value="$PROJECT_DIR$/Cw10/Controllers/EnrollmentsController.cs" />
         <option value="$PROJECT_DIR$/Cw10/Services/EfDbService.cs" />
       </list>
     </option>
@@ -95,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589286761145</updated>
-      <workItem from="1589286763767" duration="4204000" />
+      <workItem from="1589286763767" duration="9551000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1589289020038</created>
@@ -111,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589289146638</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="10.2">
+      <created>1589292772599</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589292772599</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,33 +150,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="10.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="10.2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1589292419604">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1589298929915">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589292415469" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589292419604" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1589292419599">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589298919987" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589298929915" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1589298929912">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589292415460" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589292419599" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1589292419595">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589298919981" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589298929912" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1589298929900">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589292415458" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589292419595" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1589292419601">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589298919977" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589298929900" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1589298929913">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589292415465" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589292419601" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1589289148369">
+    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589298919984" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.23.1280.1001/0.23.1440.830@0.23.1440.830" timestamp="1589298929913" />
+    <state x="499" y="157" key="RiderGenerateDialog" timestamp="1589295192987">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589289148369" />
+    <state x="499" y="157" key="RiderGenerateDialog/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589295192987" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1589292774827">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1280.1024/0.0.1440.900@0.0.1440.900" timestamp="1589292774827" />
     <state x="389" y="96" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589287564992">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

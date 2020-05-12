@@ -7,9 +7,15 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="EnrollmentsController.cs" t="Include" />
           <e p="StudentsController.cs" t="Include" />
         </e>
         <e p="Cw10.csproj" t="IncludeRecursive" />
+        <e p="DTOs" t="Include">
+          <e p="EnrollmentResponse.cs" t="Include" />
+          <e p="EnrollStudentRequest.cs" t="Include" />
+          <e p="PromoteStudentRequest.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="Enrollment.cs" t="Include" />
           <e p="s18706Context.cs" t="Include" />
