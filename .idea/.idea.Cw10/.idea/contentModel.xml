@@ -7,9 +7,15 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="WeatherForecastController.cs" t="Include" />
+          <e p="StudentsController.cs" t="Include" />
         </e>
         <e p="Cw10.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Enrollment.cs" t="Include" />
+          <e p="s18706Context.cs" t="Include" />
+          <e p="Student.cs" t="Include" />
+          <e p="Studies.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -21,8 +27,11 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Services" t="Include">
+          <e p="EfDbService.cs" t="Include" />
+          <e p="IEfDbService.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="Cw10.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
