@@ -8,7 +8,8 @@ namespace Cw10.Services
 {
     public interface IEfDbService
     {
-        public IEnumerable<Student> GetPeople();
-        
+        public IEnumerable<Student> GetStudents();
+        public Student ModifyStudent(string id, string name, string surname);
+        public Student DeleteStudent(string id);
     }
 }

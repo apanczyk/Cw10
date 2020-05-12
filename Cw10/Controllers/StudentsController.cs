@@ -22,7 +22,23 @@ namespace Cw10.Controllers
         [HttpGet]
         public IActionResult GetStudents()
         {
-            return Ok(_context.GetPeople());
+            return Ok(_context.GetStudents());
+        }
+
+        [HttpPost("{id}")]
+        public IActionResult ModifyStudent(string id, string name, string surname)
+        {
+            return Ok(_context.ModifyStudent(id,name,surname));
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteStudent(string id)
+        {
+            var response = _context.DeleteStudent(id);
+            
+            if(response != null)
+                return Ok(response);
+            return NotFound("No student to remove");
         }
 
     }
